@@ -96,7 +96,7 @@ def method1():
     vnet.initialize(init.Normal(sigma=0.01))
     loss = gloss.SoftmaxCrossEntropyLoss()
     trainer = gluon.Trainer(vnet.collect_params(), 'sgd', {'learning_rate': 0.1})
-    num_epochs = 15
+    num_epochs = 5
     d2l.train_ch3(vnet, train_iter, test_iter, loss, num_epochs, batch_size, None, None, trainer)
     for x, y in test_iter:
         break
